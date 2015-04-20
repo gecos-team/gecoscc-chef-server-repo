@@ -11,6 +11,7 @@ All you need to do is to execute our [install script](https://github.com/gecos-t
 * Install 'rvm'
 * Install 'ruby' stable version using 'rvm'
 * Install 'chef' gem
+* Create chef-solo configuration files in /tmp
 * Run 'chef-solo' with [our cookbook](https://raw.github.com/gecos-team/cookbook-gecoscc-chef-server)
 * Uninstall 'rvm' (obviously 'chef' gem also)
 * Leave your system clean with a 'gecoscc-chef-server' deployed
