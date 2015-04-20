@@ -16,6 +16,7 @@
 [submodule "cookbooks/gecos-ws-mgmt"]
 	path = cookbooks/gecos-ws-mgmt
 	url = https://github.com/gecos-team/gecos-workstation-management-cookbook.git
+	branch = development
 [submodule "cookbooks/gecos_ws_mgmt"]
 	path = cookbooks/gecos_ws_mgmt
 	url = https://github.com/gecos-team/gecos-workstation-management-cookbook.git

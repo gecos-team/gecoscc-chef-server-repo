@@ -1,6 +1,9 @@
 #!/bin/bash
 #
-# Authors: Roberto C. Morano <rcmorano<at>emergya.com>
+# Authors: 
+#   Roberto C. Morano <rcmorano@emergya.com>
+#   David Amian <damian@emergya.com>
+#   Alfonso de Cala <alfonso.cala@juntadeandalucia.es>
 #
 # Copyright 2013, Junta de Andalucia
 # http://www.juntadeandalucia.es/
@@ -13,6 +16,8 @@ export CHEF_SERVER_VER=11.0.12
 export GEM_DEPENDS="bundler ohai"
 export CHEF_REPO_NAME='gecoscc-chef-server-repo'
 export CHEF_REPO_URL="https://github.com/gecos-team/${CHEF_REPO_NAME}.git"
+export CHEF_REPO_BRANCH="development"
+
 grep -q "$HOSTNAME" /etc/hosts || sed -i "s|\(127.0.0.1.*\)|\1 $HOSTNAME|g" /etc/hosts
 
 # if we are in a "yum-able" system, install EPEL depend needed for 'rvm' install
@@ -66,12 +71,12 @@ cat > /tmp/solo.json << EOF
 }
 EOF
 
-# cleanup tmp dirs just in case there were any from older intallation tries
+# cleanup tmp dirs just in case there were any from older installation tries
 LOCAL_CHEF_REPO="/tmp/${CHEF_REPO_NAME}"
 test -d $LOCAL_CHEF_REPO && rm -rf $LOCAL_CHEF_REPO
 
-# download chef-repo
-git clone $CHEF_REPO_URL $LOCAL_CHEF_REPO
+# download specific chef-repo branch (master/development usually)
+git clone -b $CHEF_REPO_BRANCH --single-branch $CHEF_REPO_URL $LOCAL_CHEF_REPO
 cd $LOCAL_CHEF_REPO
 bundle install
 git submodule init
