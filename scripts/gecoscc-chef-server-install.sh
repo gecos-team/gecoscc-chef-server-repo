@@ -76,7 +76,7 @@ LOCAL_CHEF_REPO="/tmp/${CHEF_REPO_NAME}"
 test -d $LOCAL_CHEF_REPO && rm -rf $LOCAL_CHEF_REPO
 
 # download specific chef-repo branch (master/development usually)
-git clone -b $CHEF_REPO_BRANCH --single-branch $CHEF_REPO_URL $LOCAL_CHEF_REPO
+git clone -b $CHEF_REPO_BRANCH $CHEF_REPO_URL $LOCAL_CHEF_REPO
 cd $LOCAL_CHEF_REPO
 bundle install
 git submodule init
