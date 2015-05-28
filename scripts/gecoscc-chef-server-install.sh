@@ -11,6 +11,11 @@
 # All rights reserved - EUPL License V 1.1
 # http://www.osor.eu/eupl
 
+export ORGANIZATION_NAME="Organization Name"
+export RUBY_GEMS_REPOSITORY=" http://rubygems.org"
+export HELP_URL="http://forja.guadalinex.org/webs/gecos/doc/v2/doku.php"
+
+
 export RUBY_VER=2.1.1
 export CHEF_SERVER_VER=11.0.12
 export GEM_DEPENDS="bundler ohai"
