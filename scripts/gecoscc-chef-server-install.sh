@@ -14,6 +14,7 @@
 export ORGANIZATION_NAME="Organization Name"
 export RUBY_GEMS_REPOSITORY=" http://rubygems.org"
 export HELP_URL="http://forja.guadalinex.org/webs/gecos/doc/v2/doku.php"
+export SERVER_IP=127.0.0.1
 
 
 export RUBY_VER=2.1.1
