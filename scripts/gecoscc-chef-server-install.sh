@@ -24,6 +24,10 @@ export CHEF_REPO_NAME='gecoscc-chef-server-repo'
 export CHEF_REPO_URL="https://github.com/gecos-team/${CHEF_REPO_NAME}.git"
 export CHEF_REPO_BRANCH="development"
 
+# Tag or branch of gecoscc repository to install (see cookbook-gecosccui)         
+export GECOSCC_VER="development"
+
+
 grep -q "$HOSTNAME" /etc/hosts || sed -i "s|\(127.0.0.1.*\)|\1 $HOSTNAME|g" /etc/hosts
 
 # if we are in a "yum-able" system, install EPEL depend needed for 'rvm' install
